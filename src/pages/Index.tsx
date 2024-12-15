@@ -12,8 +12,12 @@ const Index = () => {
       
       {/* Header */}
       <div className="relative z-10 text-center py-8">
-        <h1 className="text-4xl text-primary mb-4">Pixel Gods</h1>
-        <p className="text-sm mb-8">Use arrow keys to move around!</p>
+        <h1 className="text-4xl text-white mb-4 drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">
+          Pixel Gods
+        </h1>
+        <p className="text-sm mb-8 text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]">
+          Use arrow keys to move your divine doggo!
+        </p>
       </div>
 
       {/* Game Area */}
@@ -22,8 +26,10 @@ const Index = () => {
       </div>
 
       {/* Instructions */}
-      <div className="fixed bottom-4 left-0 right-0 text-center text-sm">
-        <p>↑↓←→ to move</p>
+      <div className="fixed bottom-4 left-0 right-0 text-center">
+        <p className="text-white text-sm drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]">
+          ↑↓←→ to move your celestial companion
+        </p>
       </div>
     </div>
   );

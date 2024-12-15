@@ -1,5 +1,6 @@
 import { Character } from "@/components/Character";
 import { Cloud } from "@/components/Cloud";
+import { Obstacle } from "@/components/Obstacle";
 
 const Index = () => {
   return (
@@ -13,6 +14,8 @@ const Index = () => {
       <Cloud delay={5} top="25%" left="15%" />
       <Cloud delay={6} top="30%" left="35%" />
       <Cloud delay={7} top="18%" left="75%" />
+      <Cloud delay={8} top="12%" left="55%" />
+      <Cloud delay={9} top="22%" left="95%" />
       
       {/* Header */}
       <div className="relative z-10 text-center py-8">
@@ -20,13 +23,16 @@ const Index = () => {
           DiogoDog
         </h1>
         <p className="text-sm mb-8 text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]">
-          Use arrow keys to guide your divine doggo!
+          Use arrow keys to dodge obstacles!
         </p>
       </div>
 
       {/* Game Area */}
       <div className="relative z-0 mx-auto px-4">
         <Character />
+        <Obstacle startPosition={window.innerWidth} speed={5} delay={0} />
+        <Obstacle startPosition={window.innerWidth + 500} speed={7} delay={2000} />
+        <Obstacle startPosition={window.innerWidth + 1000} speed={4} delay={4000} />
       </div>
 
       {/* Instructions */}

@@ -22,13 +22,13 @@ export const Character = () => {
           break;
         case 'ArrowRight':
           setDirection('right');
-          setPosition(prev => ({ ...prev, x: Math.min(window.innerWidth - 48, prev.x + speed) }));
+          setPosition(prev => ({ ...prev, x: Math.min(window.innerWidth - 64, prev.x + speed) }));
           break;
         case 'ArrowUp':
           setPosition(prev => ({ ...prev, y: Math.max(0, prev.y - speed) }));
           break;
         case 'ArrowDown':
-          setPosition(prev => ({ ...prev, y: Math.min(window.innerHeight - 48, prev.y + speed) }));
+          setPosition(prev => ({ ...prev, y: Math.min(window.innerHeight - 64, prev.y + speed) }));
           break;
       }
     };
@@ -58,36 +58,36 @@ export const Character = () => {
         transition: 'transform 0.1s',
       }}
     >
-      {/* Dog Body */}
-      <div className="absolute bottom-0 w-16 h-10 bg-[#F97316] rounded-xl"></div>
+      {/* Dog Body - Made larger and more defined */}
+      <div className="absolute bottom-0 w-16 h-12 bg-[#8B5CF6] rounded-xl"></div>
       
-      {/* Head */}
-      <div className="absolute bottom-6 w-10 h-8 bg-[#F97316] rounded-xl"></div>
+      {/* Head - More pronounced */}
+      <div className="absolute bottom-8 w-12 h-10 bg-[#8B5CF6] rounded-xl"></div>
       
       {/* Snout */}
-      <div className="absolute bottom-6 left-8 w-5 h-4 bg-[#FDE1D3] rounded-lg"></div>
+      <div className="absolute bottom-8 left-8 w-6 h-5 bg-[#D6BCFA] rounded-lg"></div>
       
       {/* Nose */}
-      <div className="absolute bottom-7 left-11 w-2 h-2 bg-black rounded-full"></div>
+      <div className="absolute bottom-9 left-12 w-2.5 h-2.5 bg-black rounded-full"></div>
       
       {/* Eyes */}
-      <div className="absolute bottom-9 left-6 w-2 h-2 bg-black rounded-full"></div>
+      <div className="absolute bottom-11 left-6 w-3 h-3 bg-black rounded-full"></div>
       
-      {/* Ears */}
-      <div className="absolute bottom-12 left-2 w-4 h-5 bg-[#F97316] rounded-t-lg transform -rotate-12"></div>
-      <div className="absolute bottom-12 left-5 w-4 h-5 bg-[#F97316] rounded-t-lg transform rotate-12"></div>
+      {/* Ears - Made more floppy */}
+      <div className="absolute bottom-14 left-2 w-5 h-6 bg-[#8B5CF6] rounded-t-lg transform -rotate-12"></div>
+      <div className="absolute bottom-14 left-6 w-5 h-6 bg-[#8B5CF6] rounded-t-lg transform rotate-12"></div>
       
-      {/* Tail */}
+      {/* Tail - Enhanced wagging animation */}
       <div 
-        className={`absolute bottom-6 -right-3 w-6 h-3 bg-[#F97316] rounded-r-lg ${isMoving ? 'animate-[tail-wag_0.5s_infinite]' : ''}`}
+        className={`absolute bottom-8 -right-4 w-7 h-4 bg-[#8B5CF6] rounded-r-lg ${isMoving ? 'animate-[tail-wag_0.3s_infinite]' : ''}`}
         style={{ transformOrigin: 'left center' }}
       ></div>
       
-      {/* Legs */}
-      <div className="absolute bottom-0 left-2 w-3 h-4 bg-[#F97316]"></div>
-      <div className="absolute bottom-0 left-6 w-3 h-4 bg-[#F97316]"></div>
-      <div className="absolute bottom-0 right-2 w-3 h-4 bg-[#F97316]"></div>
-      <div className="absolute bottom-0 right-6 w-3 h-4 bg-[#F97316]"></div>
+      {/* Legs - Made more defined */}
+      <div className="absolute bottom-0 left-2 w-4 h-5 bg-[#8B5CF6]"></div>
+      <div className="absolute bottom-0 left-8 w-4 h-5 bg-[#8B5CF6]"></div>
+      <div className="absolute bottom-0 right-2 w-4 h-5 bg-[#8B5CF6]"></div>
+      <div className="absolute bottom-0 right-8 w-4 h-5 bg-[#8B5CF6]"></div>
     </div>
   );
 };

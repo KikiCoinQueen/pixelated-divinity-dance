@@ -4,7 +4,7 @@ import { FloatingEnemy } from "@/components/FloatingEnemy";
 
 const Index = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#E8F0F2] to-[#A8D1E7]">
       {/* Background Clouds */}
       <Cloud delay={0} top="5%" left="5%" />
       <Cloud delay={1} top="15%" left="25%" />
@@ -19,11 +19,14 @@ const Index = () => {
       
       {/* Header */}
       <div className="relative z-10 text-center py-8">
-        <h1 className="text-4xl text-white mb-4 drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">
-          DiogoDog
+        <h1 className="text-5xl font-bold text-[#F9D5A7] mb-4 drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">
+          DiogoDog 🐕
         </h1>
+        <p className="text-xl mb-4 text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]">
+          Your treat-loving furry friend awaits! 🦴
+        </p>
         <p className="text-sm mb-8 text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]">
-          Use arrow keys to collect treats!
+          CA: TBA | Use arrow keys to collect treats! 🍖
         </p>
       </div>
 
@@ -32,14 +35,14 @@ const Index = () => {
         <Character />
         {/* Add multiple floating enemies */}
         {[...Array(5)].map((_, i) => (
-          <FloatingEnemy key={i} onCollision={() => console.log('Collision!')} />
+          <FloatingEnemy key={i} onCollision={() => console.log('Woof! Collision!')} />
         ))}
       </div>
 
       {/* Instructions */}
       <div className="fixed bottom-4 left-0 right-0 text-center">
         <p className="text-white text-sm drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]">
-          ↑↓←→ to move your celestial companion
+          ↑↓←→ to move your celestial canine companion
         </p>
       </div>
     </div>

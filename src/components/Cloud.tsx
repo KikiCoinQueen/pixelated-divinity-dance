@@ -7,24 +7,25 @@ interface CloudProps {
 export const Cloud = ({ delay, top, left }: CloudProps) => {
   return (
     <div 
-      className="absolute float"
+      className="absolute float opacity-80"
       style={{ 
         top,
         left,
-        width: '64px',
-        height: '32px',
+        width: '80px',
+        height: '40px',
         backgroundColor: 'white',
-        borderRadius: '16px',
+        borderRadius: '20px',
         animationDelay: `${delay}s`,
+        filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))',
       }}
     >
       <div 
         className="absolute"
         style={{
-          top: '-16px',
-          left: '8px',
-          width: '32px',
-          height: '32px',
+          top: '-20px',
+          left: '15px',
+          width: '40px',
+          height: '40px',
           backgroundColor: 'white',
           borderRadius: '50%',
         }}
@@ -32,10 +33,10 @@ export const Cloud = ({ delay, top, left }: CloudProps) => {
       <div 
         className="absolute"
         style={{
-          top: '-8px',
-          left: '24px',
-          width: '24px',
-          height: '24px',
+          top: '-12px',
+          left: '35px',
+          width: '30px',
+          height: '30px',
           backgroundColor: 'white',
           borderRadius: '50%',
         }}

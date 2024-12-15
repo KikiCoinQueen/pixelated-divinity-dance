@@ -53,35 +53,41 @@ export const Character = () => {
         left: position.x,
         top: position.y,
         transform: `scaleX(${direction === 'left' ? -1 : 1})`,
-        width: '48px',
+        width: '64px',
         height: '48px',
         transition: 'transform 0.1s',
       }}
     >
       {/* Dog Body */}
-      <div className="absolute bottom-0 w-12 h-8 bg-[#F97316] rounded-lg"></div>
+      <div className="absolute bottom-0 w-16 h-10 bg-[#F97316] rounded-xl"></div>
       
       {/* Head */}
-      <div className="absolute bottom-4 w-8 h-6 bg-[#F97316] rounded-lg"></div>
+      <div className="absolute bottom-6 w-10 h-8 bg-[#F97316] rounded-xl"></div>
       
       {/* Snout */}
-      <div className="absolute bottom-4 left-6 w-4 h-3 bg-[#FDE1D3] rounded"></div>
+      <div className="absolute bottom-6 left-8 w-5 h-4 bg-[#FDE1D3] rounded-lg"></div>
       
-      {/* Eye */}
-      <div className="absolute bottom-6 left-5 w-1 h-1 bg-black rounded-full"></div>
+      {/* Nose */}
+      <div className="absolute bottom-7 left-11 w-2 h-2 bg-black rounded-full"></div>
       
-      {/* Ear */}
-      <div className="absolute bottom-8 left-2 w-3 h-4 bg-[#F97316] rounded-t-lg"></div>
+      {/* Eyes */}
+      <div className="absolute bottom-9 left-6 w-2 h-2 bg-black rounded-full"></div>
+      
+      {/* Ears */}
+      <div className="absolute bottom-12 left-2 w-4 h-5 bg-[#F97316] rounded-t-lg transform -rotate-12"></div>
+      <div className="absolute bottom-12 left-5 w-4 h-5 bg-[#F97316] rounded-t-lg transform rotate-12"></div>
       
       {/* Tail */}
       <div 
-        className={`absolute bottom-4 -right-2 w-4 h-2 bg-[#F97316] rounded-r-lg ${isMoving ? 'animate-[tail-wag_0.5s_infinite]' : ''}`}
+        className={`absolute bottom-6 -right-3 w-6 h-3 bg-[#F97316] rounded-r-lg ${isMoving ? 'animate-[tail-wag_0.5s_infinite]' : ''}`}
         style={{ transformOrigin: 'left center' }}
       ></div>
       
       {/* Legs */}
-      <div className="absolute bottom-0 left-1 w-2 h-3 bg-[#F97316]"></div>
-      <div className="absolute bottom-0 right-1 w-2 h-3 bg-[#F97316]"></div>
+      <div className="absolute bottom-0 left-2 w-3 h-4 bg-[#F97316]"></div>
+      <div className="absolute bottom-0 left-6 w-3 h-4 bg-[#F97316]"></div>
+      <div className="absolute bottom-0 right-2 w-3 h-4 bg-[#F97316]"></div>
+      <div className="absolute bottom-0 right-6 w-3 h-4 bg-[#F97316]"></div>
     </div>
   );
 };

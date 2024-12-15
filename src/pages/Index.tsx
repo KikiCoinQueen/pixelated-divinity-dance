@@ -1,6 +1,6 @@
 import { Character } from "@/components/Character";
 import { Cloud } from "@/components/Cloud";
-import { Obstacle } from "@/components/Obstacle";
+import { FloatingEnemy } from "@/components/FloatingEnemy";
 
 const Index = () => {
   return (
@@ -23,16 +23,17 @@ const Index = () => {
           DiogoDog
         </h1>
         <p className="text-sm mb-8 text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]">
-          Use arrow keys to dodge obstacles!
+          Use arrow keys to collect treats!
         </p>
       </div>
 
       {/* Game Area */}
       <div className="relative z-0 mx-auto px-4">
         <Character />
-        <Obstacle startPosition={window.innerWidth} speed={5} delay={0} />
-        <Obstacle startPosition={window.innerWidth + 500} speed={7} delay={2000} />
-        <Obstacle startPosition={window.innerWidth + 1000} speed={4} delay={4000} />
+        {/* Add multiple floating enemies */}
+        {[...Array(5)].map((_, i) => (
+          <FloatingEnemy key={i} onCollision={() => console.log('Collision!')} />
+        ))}
       </div>
 
       {/* Instructions */}

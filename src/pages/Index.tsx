@@ -26,7 +26,8 @@ const Index = () => {
           Your treat-loving furry friend awaits! 🦴
         </p>
         <p className="text-sm mb-8 text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]">
-          CA: TBA | Use arrow keys to collect treats! 🍖
+          CA: FwJjXr7TbQMC5VWiFtyUcrBCgsqWQpfAWJvNjeXSpump
+ | Use arrow keys to collect treats! 🍖
         </p>
       </div>
 
